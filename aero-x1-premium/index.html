@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AERO X1 – Premium Flight Concept</title>
+  <meta name="description" content="AERO X1 – ein futuristisches Flugzeugkonzept. Dein Himmel. Deine Freiheit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">AERO <b>X1</b></span>
+      <span class="sub">PREMIUM FLIGHT CONCEPT</span>
+    </div>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#design" data-target="design">Design</a>
+      <a href="#technologie" data-target="technologie">Technologie</a>
+      <a href="#daten" data-target="daten">Technische Daten</a>
+    </nav>
+  </header>
+
+  <main class="poster">
+    <aside class="col col-left">
+      <section class="card" id="design">
+        <h2>Design</h2>
+        <ul>
+          <li>Futuristischer Speed-Jet</li>
+          <li>Spitz zulaufende Flugzeugnase</li>
+          <li>Nach hinten geschwungene Flügel</li>
+          <li>Professionelles, aerodynamisches Design</li>
+        </ul>
+      </section>
+      <section class="card" id="cockpit">
+        <h2>Cockpit</h2>
+        <ul>
+          <li>Große Panoramascheibe</li>
+          <li>Gute Rundumsicht</li>
+          <li>Moderner Innenraum</li>
+        </ul>
+      </section>
+    </aside>
+
+    <section class="stage-wrap" aria-label="3D-Ansicht des AERO X1">
+      <div class="stage" id="stage">
+        <canvas id="viewer"></canvas>
+        <div class="status" id="status" role="status">
+          <p id="statusText">Modell wird geladen …</p>
+          <div class="bar"><i id="statusBar"></i></div>
+        </div>
+        <div class="drop-hint" id="dropHint">STL-Datei hier ablegen</div>
+      </div>
+      <div class="controls">
+        <button type="button" id="toggleRotate" class="btn">❚❚ Drehung pausieren</button>
+        <button type="button" id="toggleOrient" class="btn" title="Falls das Modell auf der Seite oder auf dem Kopf liegt">⟳ Ausrichtung ändern</button>
+        <label class="btn btn-gold" for="stlFile">STL-Datei laden</label>
+        <input type="file" id="stlFile" accept=".stl,model/stl" hidden>
+      </div>
+      <p class="hint">Ziehen = drehen · Mausrad / Pinch = zoomen · <span id="fileName">models/AERO-X1.stl</span></p>
+    </section>
+
+    <aside class="col col-right">
+      <section class="card" id="technologie">
+        <h2>Antrieb</h2>
+        <ul>
+          <li>Ein integrierter Antrieb</li>
+        </ul>
+      </section>
+      <section class="card" id="steuerung">
+        <h2>Steuerung</h2>
+        <ul>
+          <li>Digitales Cockpit</li>
+          <li>Navigationssystem</li>
+          <li>Intelligente Steuerungsunterstützung</li>
+        </ul>
+      </section>
+      <section class="card" id="daten">
+        <h2>Konzept</h2>
+        <ul>
+          <li>Einsitziger Flugapparat</li>
+          <li>Reinweißes Design</li>
+          <li>Futuristische Konstruktion</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="claim">
+    <h1>AERO X1 – DEIN HIMMEL. DEINE FREIHEIT.</h1>
+    <p>Entdecke eine neue Perspektive des Fliegens. Der AERO X1 verbindet ein futuristisches Design mit innovativer Technik und einem außergewöhnlichen Flugerlebnis.</p>
+    <small>AERO X1 ist ein kreatives Konzeptprojekt.</small>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
